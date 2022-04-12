@@ -10,4 +10,4 @@ In addition, this repository contains packaging metadata for package managers ru
 
 - [x] [Snappy](/snap)
 
-- [ ] [Debian](/debian)
+- [x] [Debian](/debian)

@@ -5,19 +5,19 @@
 # See "man systemd.service" for details.
 
 # Note that almost all daemon options could be specified in
-# /etc/bitcoin/bitcoin.conf
+# /etc/vertcoin/vertcoin.conf
 
 [Unit]
-Description=Bitcoin daemon
+Description=Vertcoin daemon
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/bitcoind -daemon -datadir=/var/lib/bitcoin -conf=/etc/bitcoin/bitcoin.conf -pid=/run/bitcoind/bitcoind.pid
-# Creates /run/bitcoind owned by bitcoin
-RuntimeDirectory=bitcoind
-User=bitcoin
+ExecStart=/usr/bin/vertcoind -daemon -datadir=/var/lib/vertcoin -conf=/etc/vertcoin/vertcoin.conf -pid=/run/vertcoind/vertcoind.pid
+# Creates /run/vertcoind owned by vertcoin
+RuntimeDirectory=vertcoind
+User=vertcoin
 Type=forking
-PIDFile=/run/bitcoind/bitcoind.pid
+PIDFile=/run/vertcoind/vertcoind.pid
 Restart=on-failure
 
 # Hardening measures

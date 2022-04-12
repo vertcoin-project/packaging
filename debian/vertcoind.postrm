@@ -1,11 +1,11 @@
 #!/bin/sh
 
-# setup bitcoin account, homedir etc
+# setup vertcoin account, homedir etc
 
 set -e
 
-BCUSER="bitcoin"
-BCHOME="/var/lib/bitcoin"
+BCUSER="vertcoin"
+BCHOME="/var/lib/vertcoin"
 
 if [ "$1" = "purge" ]; then
 
@@ -17,7 +17,7 @@ if [ "$1" = "purge" ]; then
 
 	echo
 	echo "#"
-	echo "#  The bitcoin user (${BCUSER}) and data dir (${BCHOME})"
+	echo "#  The vertcoin user (${BCUSER}) and data dir (${BCHOME})"
 	echo "#  were left intact."
 	echo "#"
 	echo "#  Make sure to check \"${BCHOME}\" for wallets and other"

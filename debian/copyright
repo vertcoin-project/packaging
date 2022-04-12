@@ -6,6 +6,7 @@ Source: https://github.com/bitcoin/bitcoin
 
 Files: *
 Copyright: 2009-2018, Bitcoin Core Developers
+Copyright: 2014-2022, Vertcoin Core Developers
 License: Expat
 Comment: The Bitcoin Core Developers encompasses the current developers listed on bitcoin.org,
          as well as the numerous contributors to the project.
