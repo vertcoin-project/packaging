@@ -2,46 +2,20 @@
 
 include /usr/share/dpkg/pkg-info.mk
 
-# detect if build is targeted experimental suite (or is a draft)
-DEB_SUITE_EXP = $(filter experimental% UNRELEASED,$(DEB_DISTRIBUTION))
-
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
-#testsuite needs writable $HOME and $TMPDIR (see bug#696262 #790403)
-FAKETMP = $(CURDIR)/debian/faketmp
-
-# TODO: uncomment when package is long-term stable, to ease stable bugfixing
-# use embedded libraries except when targeted experimental
-#USE_SHARED_LIBRARIES = $(DEB_SUITE_EXP)
-
-CONFIGURE_OPTS = --without-libs --with-incompatible-bdb --disable-bench
-ifneq (,$(USE_SHARED_LIBRARIES))
-CONFIGURE_OPTS += --with-system-leveldb --with-system-secp256k1 --with-system-univalue
-else
-CONFIGURE_OPTS += --without-system-leveldb --without-system-secp256k1 --without-system-univalue
-endif
+CONFIGURE_OPTS = --without-libs --disable-bench --disable-tests --with-system-leveldb --with-system-secp256k1 --with-system-univalue
 
 %:
 	dh $@
 
 execute_before_dh_auto_clean:
-	rm -rf "$(FAKETMP)"
 	rm -rf src/obj
 	-rmdir --ignore-fail-on-non-empty build
-	rm -f src/vertcoind
-
-ifneq (,$(USE_SHARED_LIBRARIES))
-execute_before_dh_clean:
-	rm -rf src/leveldb src/secp256k1 src/univalue
-endif
+	rm -f src/vertcoin*
 
 override_dh_auto_configure:
-	mkdir -p "$(FAKETMP)"
-	mkdir -p src/obj/nogui
 	dh_auto_configure -- $(CONFIGURE_OPTS)
 
 override_dh_auto_test:
-	HOME=${FAKETMP} TMPDIR=${FAKETMP} LC_ALL=C.UTF-8 dh_auto_test || ( cat src/test-suite.log && false )
-
-override_dh_installchangelogs:
-	dh_installchangelogs -k doc/release-notes.md
+    xvfb-run -n 99 -l make
