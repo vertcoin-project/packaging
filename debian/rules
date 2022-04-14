@@ -4,7 +4,7 @@ include /usr/share/dpkg/pkg-info.mk
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
-CONFIGURE_OPTS = --without-libs --disable-bench --disable-tests --with-system-leveldb --with-system-secp256k1 --with-system-univalue
+CONFIGURE_OPTS = --without-libs --disable-bench --disable-tests
 
 %:
 	dh $@
