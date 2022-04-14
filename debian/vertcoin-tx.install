@@ -1,1 +1,2 @@
-usr/local/bin/vertcoin-tx usr/bin
+usr/bin/vertcoin-tx
+usr/bin/vertcoin-wallet

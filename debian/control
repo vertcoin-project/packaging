@@ -15,17 +15,13 @@ Build-Depends:
  libboost-system-dev,
  libboost-test-dev,
  libboost-thread-dev,
- libdb++-dev,
  libevent-dev,
  libgmp-dev,
- libleveldb-dev,
  libminiupnpc-dev,
  libprotobuf-dev,
  libqrencode-dev,
- libsecp256k1-dev (>= 0.1~20210825),
  libsqlite3-dev,
  libssl-dev,
- libunivalue-dev,
  libzmq3-dev,
  pkg-config,
  protobuf-compiler,
@@ -91,3 +87,21 @@ Suggests:
  This package provides vertcoin-tx, a command-line transaction creation
  tool which can be used without a vertcoin daemon.  Some means of
  exchanging minimal transaction data with peers is still required.
+
+Package: vertcoin-wallet
+Architecture: any
+Depends:
+${misc:Depends},
+${shlibs:Depends},
+Suggests:
+bash-completion,
+Description: peer-to-peer digital currency - standalone transaction tool
+Vertcoin is a free open source peer-to-peer electronic cash system that
+is completely decentralized, without the need for a central server or
+trusted parties.  Users hold the crypto keys to their own money and
+transact directly with each other, with the help of a P2P network to
+check for double-spending.
+.
+This package provides vertcoin-tx, a command-line transaction creation
+tool which can be used without a vertcoin daemon.  Some means of
+exchanging minimal transaction data with peers is still required.

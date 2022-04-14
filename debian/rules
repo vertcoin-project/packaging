@@ -14,6 +14,11 @@ execute_before_dh_auto_clean:
 	-rmdir --ignore-fail-on-non-empty build
 	rm -f src/vertcoin*
 
+ifneq (,$(USE_SHARED_LIBRARIES))
+execute_before_dh_clean:
+	rm -rf src/leveldb src/secp256k1 src/univalue
+endif
+
 override_dh_auto_configure:
 	dh_auto_configure -- $(CONFIGURE_OPTS)
 
