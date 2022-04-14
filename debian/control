@@ -1,4 +1,4 @@
-Source: vertcoind
+Source: vertcoin
 Section: utils
 Priority: optional
 Maintainer: vertion <vertion@protonmail.com>
@@ -8,7 +8,7 @@ Build-Depends: debhelper,
  automake,
  libtool,
  bash-completion,
- libdb4.8++-dev,
+ libdb5.3++-dev,
  libssl-dev,
  pkg-config,
  libevent-dev,
@@ -19,7 +19,7 @@ Build-Depends: debhelper,
  libboost-test1.48-dev | libboost-test-dev (>> 1.47),
  libboost-chrono1.48-dev | libboost-chrono-dev (>> 1.47),
  libminiupnpc8-dev | libminiupnpc-dev,
- qt4-qmake, libqt4-dev,
+ qt5-qmake, qtbase5-dev,
  xvfb,
  qttools5-dev-tools, qttools5-dev,
  libqrencode-dev,
@@ -70,3 +70,16 @@ Description: peer-to-peer digital currency - standalone transaction tool
  This package provides vertcoin-tx, a command-line transaction creation
  tool which can be used without a vertcoin daemon.  Some means of
  exchanging minimal transaction data with peers is still required.
+
+Package: vertcoin-wallet
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer digital currency - standalone wallet tool
+ Vertcoin is a free open source peer-to-peer electronic cash system that
+ is completely decentralized, without the need for a central server or
+ trusted parties.  Users hold the crypto keys to their own money and
+ transact directly with each other, with the help of a P2P network to
+ check for double-spending.
+ .
+ This package provides vertcoin-wallet, a command-line offline tool for
+ creating and interacting with Vertcoin Core wallet file.

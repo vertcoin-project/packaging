@@ -1,3 +1,9 @@
+vertcoin (20220413-0~focal3) focal; urgency=medium
+
+  * New upstream release
+
+ -- vertion <vertion@protonmail.com>  Thu, 13 Sep 2021 09:56:24 -0500
+
 bitcoin (0.16.2-trusty4) trusty; urgency=medium
 
   * Fix set direction.
