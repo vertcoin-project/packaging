@@ -1,2 +1,2 @@
-usr/bin/vertcoin-cli
-usr/bin/vertcoind
+usr/local/bin/vertcoin-cli usr/bin
+usr/local/bin/vertcoind usr/bin

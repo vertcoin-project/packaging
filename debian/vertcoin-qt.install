@@ -1,5 +1,5 @@
 #! /usr/bin/dh-exec
-usr/bin/vertcoin-qt
+usr/local/bin/vertcoin-qt usr/bin
 share/pixmaps/vertcoin16.png usr/share/icons/hicolor/16x16/apps/vertcoin.png
 share/pixmaps/vertcoin32.png usr/share/icons/hicolor/32x32/apps/vertcoin.png
 share/pixmaps/vertcoin64.png usr/share/icons/hicolor/64x64/apps/vertcoin.png
