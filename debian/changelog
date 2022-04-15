@@ -1,4 +1,4 @@
-vertcoin (0.18.0) focal; urgency=medium
+vertcoin (0.18.0-0~focal3) focal; urgency=medium
 
   * Update to upstream Bitcoin Core 0.21.2
   * Taproot was activated via MASF around September 1st, 2021
