@@ -6,7 +6,7 @@ Uploaders: vertion <vertion@protonmail.com>
 Build-Depends:
  devscripts,
  bash-completion,
- debhelper-compat (= 13),
+ debhelper-compat (= 7),
  dh-exec,
  dh-sequence-bash-completion,
  lcov,
