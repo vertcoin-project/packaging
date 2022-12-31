@@ -1,5 +1,5 @@
 name: vertcoin-core
-version: 0.18.0
+version: 22.1
 summary:   peer-to-peer network based digital currency
 description: |
   Vertcoin is a free open source peer-to-peer electronic cash system that
@@ -10,6 +10,7 @@ description: |
 
 grade: stable
 confinement: strict
+base: core18
 
 apps:
   daemon:
@@ -33,21 +34,67 @@ apps:
     plugs: [home, removable-media, network]
     environment:
       HOME: $SNAP_USER_COMMON
+  tx:
+    command: vertcoin-tx
+    environment:
+      HOME: $SNAP_USER_COMMON
+  wallet:
+    command: vertcoin-wallet
+    plugs: [home, removable-media]
+    environment:
+      HOME: $SNAP_USER_COMMON
+  util:
+    command: vertcoin-util
+    environment:
+      HOME: $SNAP_USER_COMMON
 
 parts:
-  bitcoin-core:
+  # Needed to supply desktop-launch
+  # Paste from https://github.com/ubuntu/snapcraft-desktop-helpers/blob/master/snapcraft.yaml
+  # Boilerplate seems to be required according to https://bugs.launchpad.net/snapcraft/+bug/1800057
+  desktop-qt5:
+    source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
+    source-depth: 1
+    source-subdir: qt
+    source-commit: ec861254c2a1d2447b2c589446e6cdf04c75c260
+    plugin: make
+    make-parameters: ["FLAVOR=qt5"]
+    build-packages:
+      - build-essential
+      - qtbase5-dev
+      - dpkg-dev
+    stage-packages:
+      - libxkbcommon0
+      - ttf-ubuntu-font-family
+      - dmz-cursor-theme
+      - light-themes
+      - adwaita-icon-theme
+      - gnome-themes-standard
+      - shared-mime-info
+      - libqt5gui5
+      - libgdk-pixbuf2.0-0
+      - libqt5svg5 # for loading icon themes which are svg
+      - try: [appmenu-qt5] # not available on core18
+      - locales-all
+      - xdg-user-dirs
+      - fcitx-frontend-qt5
+
+  vertcoin-core:
     plugin: nil
     override-build: | 
       env | grep SNAP
-      wget https://raw.githubusercontent.com/vertcoin-project/guix.sigs/main/${SNAPCRAFT_PROJECT_VERSION}/vertion/all.SHA256SUMS
-      wget https://github.com/vertcoin-project/vertcoin-core/releases/download/${SNAPCRAFT_PROJECT_VERSION}/vertcoin-${SNAPCRAFT_PROJECT_VERSION}-${SNAPCRAFT_ARCH_TRIPLET}.tar.gz
-      echo "e89ac4bbec19b4ac0877259475f3f88f7110495b1247acb00986543782586faa  all.SHA256SUMS" | sha256sum --check
+      wget https://github.com/vertcoin-project/vertcoin-core/releases/download/v${SNAPCRAFT_PROJECT_VERSION}/SHA256SUMS
+      wget https://github.com/vertcoin-project/vertcoin-core/releases/download/v${SNAPCRAFT_PROJECT_VERSION}/vertcoin-${SNAPCRAFT_PROJECT_VERSION}-${SNAPCRAFT_ARCH_TRIPLET}.tar.gz
+      echo "a36af7726ae9991aaf50fb71b9e1912f91de28c17328db89b15a4e573f72a819  SHA256SUMS" | sha256sum --check
       sha256sum --ignore-missing --check all.SHA256SUMS
       tar -xvf vertcoin-${SNAPCRAFT_PROJECT_VERSION}-${SNAPCRAFT_ARCH_TRIPLET}.tar.gz
       install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin vertcoin-${SNAPCRAFT_PROJECT_VERSION}/bin/vertcoind
       install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin vertcoin-${SNAPCRAFT_PROJECT_VERSION}/bin/vertcoin-qt
       install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin vertcoin-${SNAPCRAFT_PROJECT_VERSION}/bin/vertcoin-cli
-      wget https://raw.githubusercontent.com/vertcoin-project/vertcoin-core/${SNAPCRAFT_PROJECT_VERSION}/share/pixmaps/vertcoin128.png
+      install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin vertcoin-${SNAPCRAFT_PROJECT_VERSION}/bin/vertcoin-tx
+      install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin vertcoin-${SNAPCRAFT_PROJECT_VERSION}/bin/vertcoin-wallet
+      install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin vertcoin-${SNAPCRAFT_PROJECT_VERSION}/bin/vertcoin-util
+      wget https://raw.githubusercontent.com/vertcoin-project/vertcoin-core/v${SNAPCRAFT_PROJECT_VERSION}/share/pixmaps/vertcoin128.png
       install -m 0644 -D -t $SNAPCRAFT_PART_INSTALL/share/pixmaps vertcoin128.png
     build-packages:
       - wget
