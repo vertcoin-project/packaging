@@ -1,5 +1,5 @@
 name: vertcoin-core
-version: 22.1
+version: '22.1'
 summary:   peer-to-peer network based digital currency
 description: |
   Vertcoin is a free open source peer-to-peer electronic cash system that
