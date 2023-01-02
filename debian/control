@@ -96,7 +96,7 @@ Depends:
  ${shlibs:Depends},
 Suggests:
  bash-completion,
- Description: peer-to-peer digital currency - standalone transaction tool
+Description: peer-to-peer digital currency - standalone transaction tool
  Vertcoin is a free open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
