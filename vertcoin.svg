@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1709.386"
+   height="1709.386"
+   viewBox="0 0 1709.386 1709.386"
+   version="1.1"
+   id="svg35"
+   sodipodi:docname="vertcoin.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview37"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="3377.142"
+     inkscape:cy="1135.6135"
+     inkscape:window-width="3366"
+     inkscape:window-height="1376"
+     inkscape:window-x="74"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Group-Copy-4" />
+  <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+  <title
+     id="title25">Group Copy 4</title>
+  <desc
+     id="desc27">Created with Sketch.</desc>
+  <defs
+     id="defs29">
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect702"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath698">
+      <path
+         d="m -3956.2907,1027.528 103.1634,-118.65904 h 367.0775 l 225.5122,290.59374 589.6381,-825.22569 c 35.147,31.8358 68.4878,67.61545 98.9175,108.42805 30.4297,40.8126 56.7843,84.42408 79.1359,130.78958 l -724.5068,1012.21196 c -13.6918,14.5297 -28.0867,21.7944 -43.1847,21.7944 -15.098,0 -30.2926,-7.2647 -45.5838,-21.7944 l -458.2374,-598.1386 z"
+         id="path700"
+         fill="#ffffff"
+         style="display:none;fill:#ff0000"
+         sodipodi:nodetypes="cccccsccsccc" />
+      <path
+         id="lpe_path-effect702"
+         style="fill:#ff0000"
+         class="powerclip"
+         d="m -4116.6827,136.66455 h 1719.3859 V 1856.0505 h -1719.3859 z m 160.392,890.86345 h 191.9319 l 458.2374,598.1386 c 15.2912,14.5297 30.4858,21.7944 45.5838,21.7944 15.098,0 29.4929,-7.2647 43.1847,-21.7944 l 724.5068,-1012.21196 c -22.3516,-46.3655 -48.7062,-89.97698 -79.1359,-130.78958 -30.4297,-40.8126 -63.7705,-76.59225 -98.9175,-108.42805 l -589.6381,825.22569 -225.5122,-290.59374 h -367.0775 z" />
+    </clipPath>
+  </defs>
+  <g
+     id="Page-1"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd"
+     transform="translate(3190.391,-105.02656)">
+    <g
+       id="Group-Copy-4"
+       transform="translate(92.062629,-12.44211)">
+      <path
+         style="fill:#048657;fill-opacity:1;stroke-width:0.998521"
+         id="path249"
+         clip-path="url(#clipPath698)"
+         inkscape:path-effect="#path-effect702"
+         sodipodi:type="arc"
+         sodipodi:cx="-3256.9897"
+         sodipodi:cy="996.35754"
+         sodipodi:rx="854.69299"
+         sodipodi:ry="854.69299"
+         d="m -2402.2968,996.35754 a 854.69299,854.69299 0 0 1 -854.6929,854.69296 854.69299,854.69299 0 0 1 -854.693,-854.69296 854.69299,854.69299 0 0 1 854.693,-854.69299 854.69299,854.69299 0 0 1 854.6929,854.69299 z"
+         transform="translate(829.22914,-24.195883)" />
+      <path
+         d="m -3127.0613,1003.3322 103.1634,-118.6591 h 367.0775 l 225.5122,290.5936 589.6381,-825.2255 c 35.147,31.8358 68.4878,67.6154 98.9175,108.428 30.4297,40.8126 56.7843,84.4241 79.1359,130.7896 l -724.5068,1012.2118 c -13.6918,14.5297 -28.0867,21.7945 -43.1847,21.7945 -15.098,0 -30.2926,-7.2648 -45.5838,-21.7945 l -458.2374,-598.1384 z"
+         id="Path-2-Copy-6-3"
+         fill="#ffffff"
+         style="fill:#ffffff"
+         sodipodi:nodetypes="cccccsccsccc" />
+    </g>
+  </g>
+  <metadata
+     id="metadata728">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Group Copy 4</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
