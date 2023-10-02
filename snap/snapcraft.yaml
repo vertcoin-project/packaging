@@ -1,6 +1,6 @@
 name: vertcoin-core
-version: '22.1'
-summary:   peer-to-peer network based digital currency
+version: '23.2'
+summary: Fully validating Vertcoin peer-to-peer network node, wallet and GUI
 description: |
   Vertcoin Core connects to the Vertcoin peer-to-peer network to download and
   fully validate blocks and transactions. It also includes a wallet and
@@ -84,7 +84,7 @@ parts:
       wget https://github.com/vertcoin-project/vertcoin-core/releases/download/v${SNAPCRAFT_PROJECT_VERSION}/SHA256SUMS
       wget https://github.com/vertcoin-project/vertcoin-core/releases/download/v${SNAPCRAFT_PROJECT_VERSION}/vertcoin-${SNAPCRAFT_PROJECT_VERSION}.tar.gz
       wget https://github.com/vertcoin-project/vertcoin-core/releases/download/v${SNAPCRAFT_PROJECT_VERSION}/vertcoin-${SNAPCRAFT_PROJECT_VERSION}-${SNAPCRAFT_ARCH_TRIPLET}.tar.gz
-      echo "a36af7726ae9991aaf50fb71b9e1912f91de28c17328db89b15a4e573f72a819  SHA256SUMS" | sha256sum --check
+      echo "9712d5a5831352c4f6cc628e20ee7d9610645fc5f171fbddce773a2965222b2c  SHA256SUMS" | sha256sum --check
       sha256sum --ignore-missing --check SHA256SUMS
       tar -xvf vertcoin-${SNAPCRAFT_PROJECT_VERSION}-${SNAPCRAFT_ARCH_TRIPLET}.tar.gz
       install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin vertcoin-${SNAPCRAFT_PROJECT_VERSION}/bin/vertcoind
